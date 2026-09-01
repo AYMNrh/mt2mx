@@ -1,0 +1,38 @@
+{
+  "blocking_issues": 2,
+  "crosswalk_rows": 234,
+  "dfr_input_rows": 38912,
+  "dfr_status_counts": {
+    "DFR_MESSAGE_NOT_IN_SCOPE": 10,
+    "MATCHED": 222,
+    "NOT_APPLICABLE": 1,
+    "PATH_NOT_MAPPED": 1
+  },
+  "documented_gap_rows": 1,
+  "full_xsd_path_counts": {
+    "camt.054.001.08": 3302,
+    "camt.060.001.05": 379,
+    "pacs.008.001.08": 2170,
+    "pacs.009.001.08": 3024
+  },
+  "generated_at": "2026-09-01T07:56:49+00:00",
+  "mt_message_counts": {
+    "MT103": 23,
+    "MT202": 11,
+    "MT202_COV": 19,
+    "MT910": 9,
+    "MT920": 5
+  },
+  "mt_occurrences": 67,
+  "rule_rows": 234,
+  "selected_unique_mx_paths": 181,
+  "source_register_rows": 20,
+  "verification": {
+    "all_67_mt_occurrences_covered": true,
+    "all_nonempty_mx_paths_exist_in_xsd": true,
+    "cbpr_approved": false,
+    "full_extracted_text_embedded": false,
+    "licensed_pdfs_embedded": false
+  },
+  "xsd_valid_target_rows": 233
+}

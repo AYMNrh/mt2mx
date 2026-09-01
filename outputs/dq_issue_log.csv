@@ -1,0 +1,11 @@
+﻿issue_id,severity,scope,issue_type,description,required_action,status
+DQ-001,BLOCKING,ALL,MISSING_USAGE_GUIDELINES,Applicable CBPR+ Usage Guidelines are not in the evidence pack.,Export the exact current guidelines from MyStandards and register version/applicability.,OPEN
+DQ-002,BLOCKING,ALL,MISSING_TRANSLATION_LIBRARY,SWIFT Translation Library rules are unavailable.,Obtain licensed rules or perform line-by-line SME approval before implementation.,OPEN
+DQ-003,HIGH,MT103#10,BAH_CONTEXT,Field 51A is sending-institution/network context and was not forced into an ISO Document path.,Review Business Application Header mapping.,OPEN
+DQ-004,HIGH,MT910#2,REFERENCE_AMBIGUITY,Field 21 may represent different reference types depending on the causing message.,Retain source-message provenance and approve selection logic.,OPEN
+DQ-005,HIGH,MT103/MT202/MT202_COV/MT910,TIME_NORMALIZATION,13C/13D require code and timezone/offset normalization.,"Define timezone, daylight-saving, and code-specific conversion policy.",OPEN
+DQ-006,HIGH,PARTY_AND_AGENT_FIELDS,OPTION_PARSING,"MT letter options encode different account, identifier, name and address structures.",Validate each option/subfield rule and preserve original values for audit.,OPEN
+DQ-007,MEDIUM,PACS/CAMT,VERSION_DRIFT,Target MX versions differ from the DFR mapping versions.,Review unmatched paths and approve exact-path reuse across versions.,OPEN
+DQ-008,HIGH,MT920→camt.060,DFR_MESSAGE_GAP,camt.060 is not present in the current DFR source mapping.,Add camt.060 to the DFR inventory or approve a direct semantic extension.,OPEN
+DQ-009,MEDIUM,MT103#20/#21,REPEATING_CHARGE_ROLE,71F and 71G both target repeating ChargesInformation and require retained sender/receiver role.,Approve charge-agent derivation and sequence policy.,OPEN
+DQ-010,MEDIUM,PUBLICATION,LICENSE_BOUNDARY,Licensed/user-provided PDFs and extracted text must not be published.,"Keep source files git-ignored; publish manifests, hashes and derived evidence only.",CONTROLLED

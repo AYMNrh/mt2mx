@@ -1,0 +1,144 @@
+﻿message_type,occurrence_no,tag,field_name,requiredness,sequence,content_options,options,format_details,source_pdf_page
+MT103,1,20,Sender's Reference,M,,16x,,16x,14
+MT103,2,13C,Time Indication,O,,/8c/4!n1!x4!n,,,14
+MT103,3,23B,Bank Operation Code,M,,4!c,B,Option B          4!c               (Type),15
+MT103,4,23E,Instruction Code,O,,4!c[/30x],,,16
+MT103,5,26T,Transaction Type Code,O,,3!c,T,Option T                3!c              (Type),18
+MT103,6,32A,Value Date/Currency/Interbank Settled Amount,M,,,,,18
+MT103,7,33B,Currency/Instructed Amount,O,,3!a15d,,,19
+MT103,8,36,Exchange Rate,O,,12d,,,20
+MT103,9,50a,Ordering Customer,M,,"A, F, K",A|F|K,"Option A                [/34x]          (Account)
+Option F                4!a2!a2!c[3!c]  (Identifier Code)
+35x             (Party Identifier)
+Option K                4*(1!n/33x)     (Number/Name and Address)
+[/34x]          (Account)
+4*35x           (Name and Address)
+In option F, the following line formats must be used (Error code(s): T54):
+Line 1 (subfield        /34x            (Account)
+Party Identifier)       1!n/33x         (Number)(Details)
+Or
+Line 1 (subfield        4!a/2!a/27x     (Code)(Country Code)(Identifier)
+Party Identifier)       1!n/33x         (Number)(Details)",20
+MT103,10,51A,Sending Institution,O,,[/1!a][/34x],,,24
+MT103,11,52a,Ordering Institution,O,,"A, D",A|D,,24
+MT103,12,53a,Sender's Correspondent,O,,"A, B, D",A|B|D,,26
+MT103,13,54a,Receiver's Correspondent,O,,"A, B, D",A|B|D,,27
+MT103,14,55a,Third Reimbursement Institution,O,,"A, B, D",A|B|D,,28
+MT103,15,56a,Intermediary Institution,O,,"A, C, D",A|C|D,,29
+MT103,16,57a,Account With Institution,O,,"A, B, C, D",A|B|C|D,,31
+MT103,17,59a,Beneficiary Customer,M,,"No letter option, A, F",A|F,,34
+MT103,18,70,Remittance Information,O,,4*35x,,4*35x              (Narrative),36
+MT103,19,71A,Details of Charges,M,,3!a,A,Option A    3!a                    (Code),37
+MT103,20,71F,Sender's Charges,O,,3!a15d,,,37
+MT103,21,71G,Receiver's Charges,O,,3!a15d,,,38
+MT103,22,72,Sender to Receiver Information,O,,6*35x,,"6*35x                           (Narrative Structured Format)
+The following line formats must be used:                (Code)(Narrative)
+(Narrative)
+Line 1                  /8c/[additional information]    or
+[//additional information]      (Code)(Narrative)
+or
+[/8c/[additional information]]
+38                                                        Message Reference Guide - MT 103 Single Customer Credit Transfer
+MT 103 Single Customer Credit Transfer",38
+MT103,23,77B,Regulatory Reporting,O,,3*35x,B,"Option B                3*35x                          (Narrative)
+In addition to narrative text, the following line formats may be used:
+Line 1                  /8a/2!a[//additional informa-  (Code)(Country Code)(Narrative)
+tion]                          (Narrative)
+[//additional information]",40
+MT202,1,20,Transaction Reference Number,M,,16x,,16x,5
+MT202,2,21,Related Reference,M,,,,16x,6
+MT202,3,13C,Time Indication,O,,,,,6
+MT202,4,32A,"Value Date, Currency Code, Amount",M,,6!n3!a15d,,,7
+MT202,5,52a,Ordering Institution,O,,"A, D",A|D,,8
+MT202,6,53a,Sender's Correspondent,O,,"A, B, D",A|B|D,,10
+MT202,7,54a,Receiver's Correspondent,O,,"A, B, D",A|B|D,,11
+MT202,8,56a,Intermediary,O,,"A, D",A|D,,12
+MT202,9,57a,Account With Institution,O,,"A, B, D",A|B|D,,14
+MT202,10,58a,Beneficiary Institution,M,,"A, D",A|D,,16
+MT202,11,72,Sender to Receiver Information,O,,6*35x,,"6*35x                           (Narrative Structured Format)
+The following line formats must be used:                (Code)(Narrative)
+(Narrative)
+Line 1                  /8c/[additional information]    or
+[//additional information]      (Code)(Narrative)
+or
+[/8c/[additional information]]
+18                                            Message Reference Guide - MT 202 General Financial Institution Transfer
+MT 202 General Financial Institution Transfer",18
+MT202_COV,1,20,Transaction Reference Number,M,A,16x,,16x,6
+MT202_COV,2,21,Related Reference,M,A,16x,,16x,7
+MT202_COV,3,13C,Time Indication,O,A,/8c/4!n1!x4!n,,,7
+MT202_COV,4,32A,"Value Date, Currency Code, Amount",M,A,6!n3!a15d,,,8
+MT202_COV,5,52a,Ordering Institution,O,A,"A, D",A|D,,9
+MT202_COV,6,53a,Sender's Correspondent,O,A,"A, B, D",A|B|D,,10
+MT202_COV,7,54a,Receiver's Correspondent,O,A,"A, B, D",A|B|D,,12
+MT202_COV,8,56a,Intermediary,O,A,"A, D",A|D,,13
+MT202_COV,9,57a,Account With Institution,M,A,"A, B, D",A|B|D,,15
+MT202_COV,10,58a,Beneficiary Institution,M,A,"A, D",A|D,,17
+MT202_COV,11,72,Sender to Receiver Information,O,A,6*35x,,"6*35x                             (Narrative Structured Format)
+The following line formats must be used:  (Code)(Narrative)
+(Narrative)
+Line 1  /8c/[additional information]      or
+[//additional information]        (Code)(Narrative)
+or
+[/8c/[additional information]]
+19
+Standards MT November 2025",19
+MT202_COV,12,50a,Ordering Customer,M,B,"A, F, K",A|F|K,"Option A           [/34x]          (Account)
+Option F           4!a2!a2!c[3!c]  (Identifier Code)
+35x             (Party Identifier)
+Option K           4*(1!n/33x)     (Number/Name and Address)
+[/34x]          (Account)
+4*35x           (Name and Address)
+In option F, the following line formats must be used (Error code(s): T54):
+Line 1 (subfield   /34x            (Account)
+Party Identifier)  1!n/33x         (Number)(Details)
+Or
+Line 1 (subfield   4!a/2!a/27x     (Code)(Country Code)(Identifier)
+Party Identifier)  1!n/33x         (Number)(Details)",21
+MT202_COV,13,52a,Ordering Institution,O,B,"A, D",A|D,,24
+MT202_COV,14,56a,Intermediary Institution,O,B,"A, C, D",A|C|D,,25
+MT202_COV,15,57a,Account With Institution,M,B,"A, B, C, D",A|B|C|D,,27
+MT202_COV,16,59a,Beneficiary Customer,M,B,"No letter option, A, F",A|F,,29
+MT202_COV,17,70,Remittance Information,O,B,4*35x,,4*35x                           (Narrative),31
+MT202_COV,18,72,Sender to Receiver Information,O,B,6*35x,,"6*35x                           (Narrative Structured Format)
+The following line formats must be used:       (Code)(Narrative)
+(Narrative)
+Line 1         /8c/[additional information]    or
+[//additional information]      (Code)(Narrative)
+or
+[/8c/[additional information]]",31
+MT202_COV,19,33B,Currency/Instructed Amount,O,B,3!a15d,,,32
+MT910,1,20,Transaction Reference Number,M,,16x,,16x,5
+MT910,2,21,Related Reference,M,,16x,,16x,5
+MT910,3,25a,Account Identification,M,,"No letter option, P",P,,6
+MT910,4,13D,Date/Time Indication,O,,6!n4!n1!x4!n,,,6
+MT910,5,32A,"Value Date, Currency Code, Amount",M,,6!n3!a15d,,,7
+MT910,6,50a,Ordering Customer,O,,"A, F, K",A|F|K,"Option A    [/34x]               (Account)
+Option F    4!a2!a2!c[3!c]       (Identifier Code)
+35x                  (Party Identifier)
+Option K    4*(1!n/33x)          (Number/Name and Address)
+[/34x]               (Account)
+4*35x                (Name and Address)
+In option F, the following line formats must be used (Error code(s): T54):
+7
+Standards MT November 2025
+Line 1 (subfield        /34x             (Account)
+Party Identifier)       1!n/33x          (Number)(Details)
+Or                       4!a/2!a/27x      (Code)(Country Code)(Identifier)
+Line 1 (subfield        1!n/33x          (Number)(Details)
+Party Identifier)",7
+MT910,7,52a,Ordering Institution,O,,"A, D",A|D,,11
+MT910,8,56a,Intermediary,O,,"A, D",A|D,,13
+MT910,9,72,Sender to Receiver Information,O,,6*35x,,"6*35x           (Narrative)
+In addition to narrative text, structured text with the following line formats may be used:
+Line 1             /8c/[additional information] (Code)(Narrative)
+13
+Standards MT November 2025
+[//additional information]      (Narrative)
+or                              or
+[/8c/[additional information]]  (Code)(Narrative)",13
+MT920,1,20,Transaction Reference Number,M,,16x,,16x,5
+MT920,2,12,Message Requested,M,,3!n,,3!n,5
+MT920,3,25,Account Identification,M,,35x,,35x,5
+MT920,4,34F,Debit/(Debit and Credit) Floor Limit Indicator,O,,3!a[1!a]15d,,,6
+MT920,5,34F,Credit Floor Limit Indicator,O,,3!a[1!a]15d,,,6
