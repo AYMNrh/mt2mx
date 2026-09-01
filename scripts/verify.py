@@ -9,6 +9,7 @@ import sys
 from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "src"))
 EXPECTED_MT = {"MT103": 23, "MT202": 11, "MT202_COV": 19, "MT910": 9, "MT920": 5}
 
 
@@ -70,6 +71,32 @@ def main() -> None:
     html = (ROOT / "docs/index.html").read_text(encoding="utf-8")
     check("MT → MX → DFR review pack" in html, "HTML title/content missing")
     check("Not production-approved" in html, "HTML approval warning missing")
+
+    review = json.loads((ROOT / "outputs/translation_review.json").read_text(encoding="utf-8"))
+    check(review["samples"] == 6, f"expected 6 review samples, got {review['samples']}")
+    check(review["present_unmapped_rows"] == 0, f"unmapped source fields: {review['present_unmapped_rows']}")
+    check(review["mapped_rows"] == 61, f"expected 61 mapped field rows, got {review['mapped_rows']}")
+    check(review["skipped_rows"] == 4, f"expected 4 skipped field rows, got {review['skipped_rows']}")
+    if not review["xsd_validation_skipped"]:
+        check(review["samples_schema_valid"] == 6, "not every sample output is schema-valid")
+    review_csv = read_csv("outputs/translation_review.csv")
+    check(len(review_csv) == review["field_rows"], "review CSV row count disagrees with JSON")
+    check((ROOT / "docs/translation_review.html").exists(), "translation review HTML missing")
+
+    try:
+        from mt2mx.runtime.builder import translate
+        from mt2mx.runtime.validation import schemas_available, validate
+
+        if schemas_available():
+            sample_files = sorted((ROOT / "examples" / "samples").glob("*.mt"))
+            for sample in sample_files:
+                result = translate(sample.read_text(encoding="utf-8"))
+                errors = validate(result.xml, result.mx_message_id)
+                check(not errors, f"{sample.name} translation is not schema-valid: {errors[:3]}")
+        else:
+            check(False, "private XSD copies missing; cannot verify translations")
+    except ImportError as exc:
+        check(False, f"translation verification unavailable: {exc}")
 
     try:
         from openpyxl import load_workbook

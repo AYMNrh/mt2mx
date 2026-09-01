@@ -1,0 +1,66 @@
+﻿sample,source_type,mt_tag,status,detail
+mt103_basic,MT103,23B,SKIPPED,bank operation code is profile-dependent; no safe direct element
+mt103_basic,MT103,32A,MAPPED,CdtTrfTxInf/IntrBkSttlmAmt+Ccy;IntrBkSttlmDt;GrpHdr/IntrBkSttlmDt
+mt103_basic,MT103,20,MAPPED,GrpHdr/MsgId
+mt103_basic,MT103,20,MAPPED,CdtTrfTxInf/PmtId/InstrId
+mt103_basic,MT103,71A,MAPPED,CdtTrfTxInf/ChrgBr
+mt103_basic,MT103,50a,MAPPED,CdtTrfTxInf/Dbtr;DbtrAcct
+mt103_basic,MT103,52a,MAPPED,CdtTrfTxInf/DbtrAgt
+mt103_basic,MT103,57a,MAPPED,CdtTrfTxInf/CdtrAgt
+mt103_basic,MT103,59a,MAPPED,CdtTrfTxInf/Cdtr;CdtrAcct
+mt103_basic,MT103,70,MAPPED,CdtTrfTxInf/RmtInf/Ustrd
+mt103_fx,MT103,71F,SKIPPED,"ChrgsInf requires Agt, which the MT field cannot supply (DQ-009); retained for review"
+mt103_fx,MT103,71G,SKIPPED,"ChrgsInf requires Agt, which the MT field cannot supply (DQ-009); retained for review"
+mt103_fx,MT103,23B,SKIPPED,bank operation code is profile-dependent; no safe direct element
+mt103_fx,MT103,32A,MAPPED,CdtTrfTxInf/IntrBkSttlmAmt+Ccy;IntrBkSttlmDt;GrpHdr/IntrBkSttlmDt
+mt103_fx,MT103,20,MAPPED,GrpHdr/MsgId
+mt103_fx,MT103,20,MAPPED,CdtTrfTxInf/PmtId/InstrId
+mt103_fx,MT103,13C,MAPPED,CdtTrfTxInf/SttlmTmReq/CLSTm
+mt103_fx,MT103,33B,MAPPED,CdtTrfTxInf/InstdAmt+Ccy
+mt103_fx,MT103,36,MAPPED,CdtTrfTxInf/XchgRate
+mt103_fx,MT103,71A,MAPPED,CdtTrfTxInf/ChrgBr
+mt103_fx,MT103,50a,MAPPED,CdtTrfTxInf/Dbtr;DbtrAcct
+mt103_fx,MT103,52a,MAPPED,CdtTrfTxInf/DbtrAgt
+mt103_fx,MT103,57a,MAPPED,CdtTrfTxInf/CdtrAgt
+mt103_fx,MT103,59a,MAPPED,CdtTrfTxInf/Cdtr;CdtrAcct
+mt103_fx,MT103,23E,MAPPED,CdtTrfTxInf/InstrForCdtrAgt
+mt103_fx,MT103,72,MAPPED,CdtTrfTxInf/InstrForNxtAgt/InstrInf
+mt103_fx,MT103,26T,MAPPED,CdtTrfTxInf/Purp/Prtry
+mt103_fx,MT103,77B,MAPPED,CdtTrfTxInf/RgltryRptg/Dtls/Inf
+mt103_fx,MT103,70,MAPPED,CdtTrfTxInf/RmtInf/Ustrd
+mt202_basic,MT202,32A,MAPPED,CdtTrfTxInf/IntrBkSttlmAmt+Ccy;IntrBkSttlmDt
+mt202_basic,MT202,20,MAPPED,GrpHdr/MsgId
+mt202_basic,MT202,20,MAPPED,CdtTrfTxInf/PmtId/InstrId
+mt202_basic,MT202,21,MAPPED,CdtTrfTxInf/PmtId/EndToEndId
+mt202_basic,MT202,56a,MAPPED,CdtTrfTxInf/IntrmyAgt1
+mt202_basic,MT202,52a,MAPPED,CdtTrfTxInf/Dbtr
+mt202_basic,MT202,57a,MAPPED,CdtTrfTxInf/CdtrAgt
+mt202_basic,MT202,58a,MAPPED,CdtTrfTxInf/Cdtr
+mt202_basic,MT202,53a,MAPPED,GrpHdr/SttlmInf/InstgRmbrsmntAgt
+mt202cov_basic,MT202_COV,32A,MAPPED,CdtTrfTxInf/IntrBkSttlmAmt+Ccy;IntrBkSttlmDt
+mt202cov_basic,MT202_COV,20,MAPPED,GrpHdr/MsgId
+mt202cov_basic,MT202_COV,20,MAPPED,CdtTrfTxInf/PmtId/InstrId
+mt202cov_basic,MT202_COV,21,MAPPED,CdtTrfTxInf/PmtId/EndToEndId
+mt202cov_basic,MT202_COV,52a,MAPPED,CdtTrfTxInf/Dbtr
+mt202cov_basic,MT202_COV,57a,MAPPED,CdtTrfTxInf/CdtrAgt
+mt202cov_basic,MT202_COV,58a,MAPPED,CdtTrfTxInf/Cdtr
+mt202cov_basic,MT202_COV,50a,MAPPED,CdtTrfTxInf/UndrlygCstmrCdtTrf/Dbtr;DbtrAcct
+mt202cov_basic,MT202_COV,52a,MAPPED,CdtTrfTxInf/UndrlygCstmrCdtTrf/DbtrAgt
+mt202cov_basic,MT202_COV,57a,MAPPED,CdtTrfTxInf/UndrlygCstmrCdtTrf/CdtrAgt
+mt202cov_basic,MT202_COV,59a,MAPPED,CdtTrfTxInf/UndrlygCstmrCdtTrf/Cdtr;CdtrAcct
+mt202cov_basic,MT202_COV,72,MAPPED,CdtTrfTxInf/UndrlygCstmrCdtTrf/InstrForNxtAgt/InstrInf
+mt202cov_basic,MT202_COV,70,MAPPED,CdtTrfTxInf/UndrlygCstmrCdtTrf/RmtInf/Ustrd
+mt202cov_basic,MT202_COV,33B,MAPPED,CdtTrfTxInf/UndrlygCstmrCdtTrf/InstdAmt+Ccy
+mt910_basic,MT910,32A,MAPPED,Ntry/Amt+Ccy;Ntry/ValDt/Dt
+mt910_basic,MT910,20,MAPPED,GrpHdr/MsgId
+mt910_basic,MT910,25a,MAPPED,Ntfctn/Acct/Id
+mt910_basic,MT910,13D,MAPPED,Ntry/BookgDt/DtTm
+mt910_basic,MT910,21,MAPPED,Ntry/NtryDtls/TxDtls/Refs/EndToEndId
+mt910_basic,MT910,50a,MAPPED,Ntry/NtryDtls/TxDtls/RltdPties/Dbtr;DbtrAcct
+mt910_basic,MT910,52a,MAPPED,Ntry/NtryDtls/TxDtls/RltdAgts/DbtrAgt
+mt910_basic,MT910,72,MAPPED,Ntry/NtryDtls/TxDtls/AddtlTxInf
+mt920_basic,MT920,20,MAPPED,GrpHdr/MsgId;RptgReq/Id
+mt920_basic,MT920,12,MAPPED,RptgReq/ReqdMsgNmId
+mt920_basic,MT920,25,MAPPED,RptgReq/Acct/Id
+mt920_basic,MT920,34F,MAPPED,RptgReq/ReqdTxTp/FlrLmt (#1)
+mt920_basic,MT920,34F,MAPPED,RptgReq/ReqdTxTp/FlrLmt (#2)

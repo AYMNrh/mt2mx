@@ -1,0 +1,18 @@
+{
+  "approval_status": "REVIEW_REQUIRED_CBPR",
+  "field_rows": 65,
+  "generated_at": "2026-09-01T08:53:13+00:00",
+  "mapped_rows": 61,
+  "present_unmapped_rows": 0,
+  "samples": 6,
+  "samples_schema_valid": 6,
+  "skipped_rows": 4,
+  "synthesized_values": {
+    "camt.054 bank transaction code": 1,
+    "camt.054 status": 1,
+    "camt.060 account owner": 1,
+    "camt.060 request status": 1,
+    "header/agent fallback": 1
+  },
+  "xsd_validation_skipped": false
+}
