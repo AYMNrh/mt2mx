@@ -116,7 +116,9 @@ def main() -> None:
     tracked = subprocess.check_output(["git", "ls-files"], cwd=ROOT, text=True).splitlines()
     unsafe = [
         name for name in tracked
-        if name.startswith(".private/") or Path(name).suffix.lower() in {".pdf", ".txt", ".xsd"}
+        if name.startswith(".private/")
+        or (Path(name).suffix.lower() == ".pdf" and not name.startswith("sources/official/"))
+        or Path(name).suffix.lower() in {".txt", ".xsd"}
     ]
     check(not unsafe, f"private/licensed file types are tracked: {unsafe}")
 

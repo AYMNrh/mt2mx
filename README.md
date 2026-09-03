@@ -32,7 +32,7 @@ The applicable CBPR+ Usage Guidelines and SWIFT Translation Library were not ava
 - every implementation candidate remains `REVIEW_REQUIRED_CBPR`;
 - uncertain relationships are labeled conditional rather than guessed;
 - the source register records both missing artifacts as blocking evidence;
-- licensed/user-provided PDFs, extracted text, and XSD copies remain private and git-ignored.
+- the user-confirmed source PDFs are included under `sources/official/`; extracted text and private XSD copies remain outside the repository.
 
 ## Deliverables
 
@@ -100,12 +100,12 @@ No row is grade A because no applicable official translation-rule export was ava
 
 ## Rebuild locally
 
-The committed outputs are viewable without licensed sources. Rebuilding requires the private PDFs, private XSD copies, and the existing DFR mapping:
+The committed outputs are viewable without rebuilding. Rebuilding requires the PDFs in `sources/official/`, private XSD copies, and the existing DFR mapping:
 
 ```bash
 uv sync --extra build --extra runtime --extra test
 uv run python scripts/build.py \
-  --pdf-dir "C:/path/to/private/source-pdfs" \
+  --pdf-dir "sources/official" \
   --text-dir ".private/extracted" \
   --xsd-dir ".private/schemas" \
   --dfr-csv "C:/path/to/ALL_SOURCE_TO_TABLES.csv"
@@ -118,12 +118,11 @@ uv run python scripts/verify.py
 
 ## Publication boundary
 
-Never commit:
+Do not commit:
 
-- source PDFs;
 - extracted full text;
 - licensed MyStandards/Translation Library exports;
 - private XSD copies;
 - confidential payment samples.
 
-The repository publishes only code, hashes, concise factual inventories, derived candidate rules, DFR lineage, and review documentation.
+The repository includes the user-confirmed source PDFs under `sources/official/`, plus code, hashes, concise factual inventories, derived candidate rules, DFR lineage, and review documentation. CBPR+ Usage Guidelines and SWIFT Translation Library rules remain unavailable and the result is not production-approved CBPR+ logic.

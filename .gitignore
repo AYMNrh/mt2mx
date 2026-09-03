@@ -1,7 +1,6 @@
 # Licensed/private evidence — never publish
 .private/
 sources/private/
-*.pdf
 *.txt
 
 # Python
