@@ -1,0 +1,136 @@
+﻿sample,source_type,mx_message_id,xml_path,sample_value,dfr_join_status,dfr_source_message_id,target_table,target_column,role
+mt103_basic,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/CdtTrfTxInf/Cdtr/Nm,ACME TRADING LTD,MATCHED,pacs.008.001.14,dim_party,party_name,creditor
+mt103_basic,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/CdtTrfTxInf/Cdtr/PstlAdr/AdrLine,1 CORPORATE AVENUE,MATCHED,pacs.008.001.14,dim_party,party_address_line,creditor
+mt103_basic,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/CdtTrfTxInf/CdtrAcct/Id/Othr/Id,GB29NWBK60161331926819,MATCHED,pacs.008.001.14,fact_payment_account,account_id,creditor_account
+mt103_basic,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/CdtTrfTxInf/CdtrAgt/FinInstnId/BICFI,CHASUS33,MATCHED,pacs.008.001.14,dim_agent,agent_bicfi,creditor_agent
+mt103_basic,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/CdtTrfTxInf/ChrgBr,SHAR,MATCHED,pacs.008.001.14,fact_payment,charge_bearer,
+mt103_basic,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/CdtTrfTxInf/Dbtr/Nm,JOHN DOE,MATCHED,pacs.008.001.14,dim_party,party_name,debtor
+mt103_basic,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/CdtTrfTxInf/Dbtr/PstlAdr/AdrLine,123 MAIN STREET,MATCHED,pacs.008.001.14,dim_party,party_address_line,debtor
+mt103_basic,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/CdtTrfTxInf/DbtrAcct/Id/IBAN,DE89370400440532013000,MATCHED,pacs.008.001.14,fact_payment_account,account_id,debtor_account
+mt103_basic,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/CdtTrfTxInf/DbtrAgt/FinInstnId/BICFI,DEUTDEFF,MATCHED,pacs.008.001.14,dim_agent,agent_bicfi,debtor_agent
+mt103_basic,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/CdtTrfTxInf/IntrBkSttlmAmt,2500.00,MATCHED,pacs.008.001.14,fact_payment,interbank_settlement_amount,
+mt103_basic,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/CdtTrfTxInf/IntrBkSttlmAmt/@Ccy,EUR,MATCHED,pacs.008.001.14,fact_payment,interbank_settlement_currency,
+mt103_basic,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/CdtTrfTxInf/IntrBkSttlmDt,2026-07-12,MATCHED,pacs.008.001.14,fact_payment,interbank_settlement_date,
+mt103_basic,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/CdtTrfTxInf/PmtId/EndToEndId,TRX98765,MATCHED,pacs.008.001.14,fact_payment,end_to_end_id,
+mt103_basic,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/CdtTrfTxInf/PmtId/InstrId,TRX98765,MATCHED,pacs.008.001.14,fact_payment,instruction_id,
+mt103_basic,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/CdtTrfTxInf/RmtInf/Ustrd,INVOICE 998877,MATCHED,pacs.008.001.14,fact_remittance,remittance_unstructured,
+mt103_basic,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/GrpHdr/CreDtTm,2026-07-12T00:00:00,MATCHED,pacs.008.001.14,fact_payment,message_creation_datetime,
+mt103_basic,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/GrpHdr/CtrlSum,2500.00,MATCHED,pacs.008.001.14,fact_payment,control_sum,
+mt103_basic,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/GrpHdr/InstdAgt/FinInstnId/BICFI,BANKDEFFXXX,MATCHED,pacs.008.001.14,dim_agent,agent_bicfi,instructed_agent
+mt103_basic,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/GrpHdr/InstgAgt/FinInstnId/BICFI,BANKBEBBAXX,MATCHED,pacs.008.001.14,dim_agent,agent_bicfi,instructing_agent
+mt103_basic,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/GrpHdr/IntrBkSttlmDt,2026-07-12,MATCHED,pacs.008.001.14,fact_payment,interbank_settlement_date,
+mt103_basic,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/GrpHdr/MsgId,TRX98765,MATCHED,pacs.008.001.14,fact_payment,group_message_id,
+mt103_basic,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/GrpHdr/NbOfTxs,1,MATCHED,pacs.008.001.14,fact_payment,number_of_transactions,
+mt103_basic,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/GrpHdr/SttlmInf/SttlmMtd,CLRG,MATCHED,pacs.008.001.14,fact_payment,settlement_method,
+mt103_basic,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/GrpHdr/TtlIntrBkSttlmAmt,2500.00,MATCHED,pacs.008.001.14,fact_payment,total_interbank_settlement_amount,
+mt103_basic,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/GrpHdr/TtlIntrBkSttlmAmt/@Ccy,EUR,MATCHED,pacs.008.001.14,fact_payment,total_interbank_settlement_currency,
+mt103_fx,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/CdtTrfTxInf/Cdtr/Nm,1/ACME TRADING LTD,MATCHED,pacs.008.001.14,dim_party,party_name,creditor
+mt103_fx,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/CdtTrfTxInf/Cdtr/PstlAdr/AdrLine,2/1 CORPORATE AVENUE,MATCHED,pacs.008.001.14,dim_party,party_address_line,creditor
+mt103_fx,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/CdtTrfTxInf/CdtrAcct/Id/Othr/Id,GB29NWBK60161331926819,MATCHED,pacs.008.001.14,fact_payment_account,account_id,creditor_account
+mt103_fx,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/CdtTrfTxInf/CdtrAgt/FinInstnId/BICFI,CHASUS33,MATCHED,pacs.008.001.14,dim_agent,agent_bicfi,creditor_agent
+mt103_fx,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/CdtTrfTxInf/ChrgBr,CRED,MATCHED,pacs.008.001.14,fact_payment,charge_bearer,
+mt103_fx,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/CdtTrfTxInf/Dbtr/Nm,1/JOHN DOE GMBH,MATCHED,pacs.008.001.14,dim_party,party_name,debtor
+mt103_fx,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/CdtTrfTxInf/Dbtr/PstlAdr/AdrLine,2/123 MAIN STREET,MATCHED,pacs.008.001.14,dim_party,party_address_line,debtor
+mt103_fx,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/CdtTrfTxInf/DbtrAcct/Id/IBAN,DE89370400440532013000,MATCHED,pacs.008.001.14,fact_payment_account,account_id,debtor_account
+mt103_fx,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/CdtTrfTxInf/DbtrAgt/FinInstnId/BICFI,DEUTDEFF,MATCHED,pacs.008.001.14,dim_agent,agent_bicfi,debtor_agent
+mt103_fx,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/CdtTrfTxInf/InstdAmt,2520.00,MATCHED,pacs.008.001.14,fact_payment,instructed_amount,
+mt103_fx,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/CdtTrfTxInf/InstdAmt/@Ccy,EUR,MATCHED,pacs.008.001.14,fact_payment,instructed_currency,
+mt103_fx,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/CdtTrfTxInf/InstrForCdtrAgt/Cd,PHOB,MATCHED,pacs.008.001.14,fact_remittance_line,remittance_code,
+mt103_fx,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/CdtTrfTxInf/InstrForNxtAgt/InstrInf,/INS/BENEFICIARY BANK TO ADVISE,MATCHED,pacs.008.001.14,fact_remittance,remittance_unstructured,
+mt103_fx,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/CdtTrfTxInf/IntrBkSttlmAmt,2510.00,MATCHED,pacs.008.001.14,fact_payment,interbank_settlement_amount,
+mt103_fx,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/CdtTrfTxInf/IntrBkSttlmAmt/@Ccy,EUR,MATCHED,pacs.008.001.14,fact_payment,interbank_settlement_currency,
+mt103_fx,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/CdtTrfTxInf/IntrBkSttlmDt,2026-07-12,MATCHED,pacs.008.001.14,fact_payment,interbank_settlement_date,
+mt103_fx,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/CdtTrfTxInf/PmtId/EndToEndId,TRXFX20260101,MATCHED,pacs.008.001.14,fact_payment,end_to_end_id,
+mt103_fx,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/CdtTrfTxInf/PmtId/InstrId,TRXFX20260101,MATCHED,pacs.008.001.14,fact_payment,instruction_id,
+mt103_fx,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/CdtTrfTxInf/Purp/Prtry,123,MATCHED,pacs.008.001.14,fact_payment,purpose,
+mt103_fx,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/CdtTrfTxInf/RgltryRptg/Dtls/Inf,/DEBT/US//REPORTING TEXT,MATCHED,pacs.008.001.14,fact_payment,related_reference,
+mt103_fx,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/CdtTrfTxInf/RmtInf/Ustrd,PAYMENT AGAINST INVOICE 2026-001,MATCHED,pacs.008.001.14,fact_remittance,remittance_unstructured,
+mt103_fx,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/CdtTrfTxInf/SttlmTmReq/CLSTm,14:30:00,MATCHED,pacs.008.001.14,fact_payment,other_cls_time,
+mt103_fx,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/CdtTrfTxInf/XchgRate,1.2345,MATCHED,pacs.008.001.14,fact_payment,exchange_rate,
+mt103_fx,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/GrpHdr/CreDtTm,2026-07-12T00:00:00,MATCHED,pacs.008.001.14,fact_payment,message_creation_datetime,
+mt103_fx,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/GrpHdr/CtrlSum,2510.00,MATCHED,pacs.008.001.14,fact_payment,control_sum,
+mt103_fx,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/GrpHdr/InstdAgt/FinInstnId/BICFI,BANKDEFFXXX,MATCHED,pacs.008.001.14,dim_agent,agent_bicfi,instructed_agent
+mt103_fx,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/GrpHdr/InstgAgt/FinInstnId/BICFI,BANKBEBBAXX,MATCHED,pacs.008.001.14,dim_agent,agent_bicfi,instructing_agent
+mt103_fx,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/GrpHdr/IntrBkSttlmDt,2026-07-12,MATCHED,pacs.008.001.14,fact_payment,interbank_settlement_date,
+mt103_fx,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/GrpHdr/MsgId,TRXFX20260101,MATCHED,pacs.008.001.14,fact_payment,group_message_id,
+mt103_fx,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/GrpHdr/NbOfTxs,1,MATCHED,pacs.008.001.14,fact_payment,number_of_transactions,
+mt103_fx,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/GrpHdr/SttlmInf/SttlmMtd,CLRG,MATCHED,pacs.008.001.14,fact_payment,settlement_method,
+mt103_fx,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/GrpHdr/TtlIntrBkSttlmAmt,2510.00,MATCHED,pacs.008.001.14,fact_payment,total_interbank_settlement_amount,
+mt103_fx,MT103,pacs.008.001.08,Document/FIToFICstmrCdtTrf/GrpHdr/TtlIntrBkSttlmAmt/@Ccy,EUR,MATCHED,pacs.008.001.14,fact_payment,total_interbank_settlement_currency,
+mt202_basic,MT202,pacs.009.001.08,Document/FICdtTrf/CdtTrfTxInf/Cdtr/FinInstnId/BICFI,BANKGB22XXX,MATCHED,pacs.009.001.13,dim_party,party_organization_id,creditor
+mt202_basic,MT202,pacs.009.001.08,Document/FICdtTrf/CdtTrfTxInf/CdtrAgt/FinInstnId/BICFI,BANKFRPPXXX,MATCHED,pacs.009.001.13,dim_agent,agent_bicfi,creditor_agent
+mt202_basic,MT202,pacs.009.001.08,Document/FICdtTrf/CdtTrfTxInf/Dbtr/FinInstnId/BICFI,BANKBEBBXXX,MATCHED,pacs.009.001.13,dim_party,party_organization_id,debtor
+mt202_basic,MT202,pacs.009.001.08,Document/FICdtTrf/CdtTrfTxInf/IntrBkSttlmAmt,10000.00,MATCHED,pacs.009.001.13,fact_payment,interbank_settlement_amount,
+mt202_basic,MT202,pacs.009.001.08,Document/FICdtTrf/CdtTrfTxInf/IntrBkSttlmAmt/@Ccy,USD,MATCHED,pacs.009.001.13,fact_payment,interbank_settlement_currency,
+mt202_basic,MT202,pacs.009.001.08,Document/FICdtTrf/CdtTrfTxInf/IntrBkSttlmDt,2025-10-28,MATCHED,pacs.009.001.13,fact_payment,interbank_settlement_date,
+mt202_basic,MT202,pacs.009.001.08,Document/FICdtTrf/CdtTrfTxInf/IntrmyAgt1/FinInstnId/BICFI,BANKUS33XXX,MATCHED,pacs.009.001.13,dim_agent,agent_bicfi,intermediary_agent_1
+mt202_basic,MT202,pacs.009.001.08,Document/FICdtTrf/CdtTrfTxInf/PmtId/EndToEndId,RELREF202,MATCHED,pacs.009.001.13,fact_payment,end_to_end_id,
+mt202_basic,MT202,pacs.009.001.08,Document/FICdtTrf/CdtTrfTxInf/PmtId/InstrId,TRX202002,MATCHED,pacs.009.001.13,fact_payment,instruction_id,
+mt202_basic,MT202,pacs.009.001.08,Document/FICdtTrf/GrpHdr/CreDtTm,2025-10-28T00:00:00,MATCHED,pacs.009.001.13,fact_payment,message_creation_datetime,
+mt202_basic,MT202,pacs.009.001.08,Document/FICdtTrf/GrpHdr/CtrlSum,10000.00,MATCHED,pacs.009.001.13,fact_payment,control_sum,
+mt202_basic,MT202,pacs.009.001.08,Document/FICdtTrf/GrpHdr/InstdAgt/FinInstnId/BICFI,BANKDEFFXXX,MATCHED,pacs.009.001.13,dim_agent,agent_bicfi,instructed_agent
+mt202_basic,MT202,pacs.009.001.08,Document/FICdtTrf/GrpHdr/InstgAgt/FinInstnId/BICFI,BANKBEBBAXX,MATCHED,pacs.009.001.13,dim_agent,agent_bicfi,instructing_agent
+mt202_basic,MT202,pacs.009.001.08,Document/FICdtTrf/GrpHdr/IntrBkSttlmDt,2025-10-28,MATCHED,pacs.009.001.13,fact_payment,interbank_settlement_date,
+mt202_basic,MT202,pacs.009.001.08,Document/FICdtTrf/GrpHdr/MsgId,TRX202002,MATCHED,pacs.009.001.13,fact_payment,group_message_id,
+mt202_basic,MT202,pacs.009.001.08,Document/FICdtTrf/GrpHdr/NbOfTxs,1,MATCHED,pacs.009.001.13,fact_payment,number_of_transactions,
+mt202_basic,MT202,pacs.009.001.08,Document/FICdtTrf/GrpHdr/SttlmInf/InstgRmbrsmntAgt/FinInstnId/BICFI,BANKDEFFXXX,MATCHED,pacs.009.001.13,dim_agent,agent_bicfi,reimbursement_agent
+mt202_basic,MT202,pacs.009.001.08,Document/FICdtTrf/GrpHdr/SttlmInf/SttlmMtd,CLRG,MATCHED,pacs.009.001.13,fact_payment,settlement_method,
+mt202_basic,MT202,pacs.009.001.08,Document/FICdtTrf/GrpHdr/TtlIntrBkSttlmAmt,10000.00,MATCHED,pacs.009.001.13,fact_payment,total_interbank_settlement_amount,
+mt202_basic,MT202,pacs.009.001.08,Document/FICdtTrf/GrpHdr/TtlIntrBkSttlmAmt/@Ccy,USD,MATCHED,pacs.009.001.13,fact_payment,total_interbank_settlement_currency,
+mt202cov_basic,MT202_COV,pacs.009.001.08,Document/FICdtTrf/CdtTrfTxInf/Cdtr/FinInstnId/BICFI,BANKIT33,MATCHED,pacs.009.001.13,dim_party,party_organization_id,creditor
+mt202cov_basic,MT202_COV,pacs.009.001.08,Document/FICdtTrf/CdtTrfTxInf/CdtrAgt/FinInstnId/BICFI,BANKFRPP,MATCHED,pacs.009.001.13,dim_agent,agent_bicfi,creditor_agent
+mt202cov_basic,MT202_COV,pacs.009.001.08,Document/FICdtTrf/CdtTrfTxInf/Dbtr/FinInstnId/BICFI,BANKBEBB,MATCHED,pacs.009.001.13,dim_party,party_organization_id,debtor
+mt202cov_basic,MT202_COV,pacs.009.001.08,Document/FICdtTrf/CdtTrfTxInf/IntrBkSttlmAmt,10000.00,MATCHED,pacs.009.001.13,fact_payment,interbank_settlement_amount,
+mt202cov_basic,MT202_COV,pacs.009.001.08,Document/FICdtTrf/CdtTrfTxInf/IntrBkSttlmAmt/@Ccy,EUR,MATCHED,pacs.009.001.13,fact_payment,interbank_settlement_currency,
+mt202cov_basic,MT202_COV,pacs.009.001.08,Document/FICdtTrf/CdtTrfTxInf/IntrBkSttlmDt,2025-10-28,MATCHED,pacs.009.001.13,fact_payment,interbank_settlement_date,
+mt202cov_basic,MT202_COV,pacs.009.001.08,Document/FICdtTrf/CdtTrfTxInf/PmtId/EndToEndId,RELREF001,MATCHED,pacs.009.001.13,fact_payment,end_to_end_id,
+mt202cov_basic,MT202_COV,pacs.009.001.08,Document/FICdtTrf/CdtTrfTxInf/PmtId/InstrId,TRX202COV001,MATCHED,pacs.009.001.13,fact_payment,instruction_id,
+mt202cov_basic,MT202_COV,pacs.009.001.08,Document/FICdtTrf/CdtTrfTxInf/UndrlygCstmrCdtTrf/Cdtr/Nm,BOB BENEFICIARY,MATCHED,pacs.009.001.13,dim_party,party_name,creditor
+mt202cov_basic,MT202_COV,pacs.009.001.08,Document/FICdtTrf/CdtTrfTxInf/UndrlygCstmrCdtTrf/CdtrAcct/Id/Othr/Id,987654321,MATCHED,pacs.009.001.13,fact_payment_account,account_id,creditor_account
+mt202cov_basic,MT202_COV,pacs.009.001.08,Document/FICdtTrf/CdtTrfTxInf/UndrlygCstmrCdtTrf/CdtrAgt/FinInstnId/BICFI,CHASUS33,MATCHED,pacs.009.001.13,dim_agent,agent_bicfi,creditor_agent
+mt202cov_basic,MT202_COV,pacs.009.001.08,Document/FICdtTrf/CdtTrfTxInf/UndrlygCstmrCdtTrf/Dbtr/Nm,ALICE CUSTOMER,MATCHED,pacs.009.001.13,dim_party,party_name,debtor
+mt202cov_basic,MT202_COV,pacs.009.001.08,Document/FICdtTrf/CdtTrfTxInf/UndrlygCstmrCdtTrf/DbtrAcct/Id/Othr/Id,123456789,MATCHED,pacs.009.001.13,fact_payment_account,account_id,debtor_account
+mt202cov_basic,MT202_COV,pacs.009.001.08,Document/FICdtTrf/CdtTrfTxInf/UndrlygCstmrCdtTrf/DbtrAgt/FinInstnId/BICFI,DEUTDEFF,MATCHED,pacs.009.001.13,dim_agent,agent_bicfi,debtor_agent
+mt202cov_basic,MT202_COV,pacs.009.001.08,Document/FICdtTrf/CdtTrfTxInf/UndrlygCstmrCdtTrf/InstdAmt,10010.00,MATCHED,pacs.009.001.13,fact_payment,instructed_amount,
+mt202cov_basic,MT202_COV,pacs.009.001.08,Document/FICdtTrf/CdtTrfTxInf/UndrlygCstmrCdtTrf/InstdAmt/@Ccy,EUR,MATCHED,pacs.009.001.13,fact_payment,instructed_currency,
+mt202cov_basic,MT202_COV,pacs.009.001.08,Document/FICdtTrf/CdtTrfTxInf/UndrlygCstmrCdtTrf/InstrForNxtAgt/InstrInf,/REC/THANKS,MATCHED,pacs.009.001.13,fact_remittance,remittance_unstructured,
+mt202cov_basic,MT202_COV,pacs.009.001.08,Document/FICdtTrf/CdtTrfTxInf/UndrlygCstmrCdtTrf/RmtInf/Ustrd,PAYMENT FOR INVOICE 12345,MATCHED,pacs.009.001.13,fact_remittance,remittance_unstructured,
+mt202cov_basic,MT202_COV,pacs.009.001.08,Document/FICdtTrf/GrpHdr/CreDtTm,2025-10-28T00:00:00,MATCHED,pacs.009.001.13,fact_payment,message_creation_datetime,
+mt202cov_basic,MT202_COV,pacs.009.001.08,Document/FICdtTrf/GrpHdr/CtrlSum,10000.00,MATCHED,pacs.009.001.13,fact_payment,control_sum,
+mt202cov_basic,MT202_COV,pacs.009.001.08,Document/FICdtTrf/GrpHdr/InstdAgt/FinInstnId/BICFI,BANKDEFFXXX,MATCHED,pacs.009.001.13,dim_agent,agent_bicfi,instructed_agent
+mt202cov_basic,MT202_COV,pacs.009.001.08,Document/FICdtTrf/GrpHdr/InstgAgt/FinInstnId/BICFI,BANKBEBBAXX,MATCHED,pacs.009.001.13,dim_agent,agent_bicfi,instructing_agent
+mt202cov_basic,MT202_COV,pacs.009.001.08,Document/FICdtTrf/GrpHdr/IntrBkSttlmDt,2025-10-28,MATCHED,pacs.009.001.13,fact_payment,interbank_settlement_date,
+mt202cov_basic,MT202_COV,pacs.009.001.08,Document/FICdtTrf/GrpHdr/MsgId,TRX202COV001,MATCHED,pacs.009.001.13,fact_payment,group_message_id,
+mt202cov_basic,MT202_COV,pacs.009.001.08,Document/FICdtTrf/GrpHdr/NbOfTxs,1,MATCHED,pacs.009.001.13,fact_payment,number_of_transactions,
+mt202cov_basic,MT202_COV,pacs.009.001.08,Document/FICdtTrf/GrpHdr/SttlmInf/SttlmMtd,CLRG,MATCHED,pacs.009.001.13,fact_payment,settlement_method,
+mt202cov_basic,MT202_COV,pacs.009.001.08,Document/FICdtTrf/GrpHdr/TtlIntrBkSttlmAmt,10000.00,MATCHED,pacs.009.001.13,fact_payment,total_interbank_settlement_amount,
+mt202cov_basic,MT202_COV,pacs.009.001.08,Document/FICdtTrf/GrpHdr/TtlIntrBkSttlmAmt/@Ccy,EUR,MATCHED,pacs.009.001.13,fact_payment,total_interbank_settlement_currency,
+mt910_basic,MT910,camt.054.001.08,Document/BkToCstmrDbtCdtNtfctn/GrpHdr/CreDtTm,2026-07-12T00:00:00,MATCHED,camt.054.001.14,fact_payment,message_creation_datetime,
+mt910_basic,MT910,camt.054.001.08,Document/BkToCstmrDbtCdtNtfctn/GrpHdr/MsgId,NOTIF0001,MATCHED,camt.054.001.14,fact_payment,group_message_id,
+mt910_basic,MT910,camt.054.001.08,Document/BkToCstmrDbtCdtNtfctn/Ntfctn/Acct/Id/IBAN,DE89370400440532013000,MATCHED,camt.054.001.14,fact_payment_account,account_id,reporting_account
+mt910_basic,MT910,camt.054.001.08,Document/BkToCstmrDbtCdtNtfctn/Ntfctn/Id,NOTIF0001,MATCHED,camt.054.001.14,fact_payment,related_reference,
+mt910_basic,MT910,camt.054.001.08,Document/BkToCstmrDbtCdtNtfctn/Ntfctn/Ntry/Amt,2500.00,MATCHED,camt.054.001.14,fact_account_entry,entry_amount,
+mt910_basic,MT910,camt.054.001.08,Document/BkToCstmrDbtCdtNtfctn/Ntfctn/Ntry/Amt/@Ccy,EUR,MATCHED,camt.054.001.14,fact_account_entry,entry_currency,
+mt910_basic,MT910,camt.054.001.08,Document/BkToCstmrDbtCdtNtfctn/Ntfctn/Ntry/BkTxCd/Prtry/Cd,M910,MATCHED,camt.054.001.14,fact_account_entry,bank_transaction_code,
+mt910_basic,MT910,camt.054.001.08,Document/BkToCstmrDbtCdtNtfctn/Ntfctn/Ntry/BkTxCd/Prtry/Issr,MT2MX-CANDIDATE,MATCHED,camt.054.001.14,fact_account_entry,bank_transaction_code,
+mt910_basic,MT910,camt.054.001.08,Document/BkToCstmrDbtCdtNtfctn/Ntfctn/Ntry/BookgDt/DtTm,2026-07-12T14:30:00+01:00,MATCHED,camt.054.001.14,fact_account_entry,entry_booking_date,
+mt910_basic,MT910,camt.054.001.08,Document/BkToCstmrDbtCdtNtfctn/Ntfctn/Ntry/CdtDbtInd,CRDT,MATCHED,camt.054.001.14,fact_account_entry,credit_debit_indicator,
+mt910_basic,MT910,camt.054.001.08,Document/BkToCstmrDbtCdtNtfctn/Ntfctn/Ntry/NtryDtls/TxDtls/AddtlTxInf,/REC/THANKS,MATCHED,camt.054.001.14,fact_remittance,remittance_unstructured,
+mt910_basic,MT910,camt.054.001.08,Document/BkToCstmrDbtCdtNtfctn/Ntfctn/Ntry/NtryDtls/TxDtls/Refs/EndToEndId,TRX98765,MATCHED,camt.054.001.14,fact_payment,end_to_end_id,
+mt910_basic,MT910,camt.054.001.08,Document/BkToCstmrDbtCdtNtfctn/Ntfctn/Ntry/NtryDtls/TxDtls/RltdAgts/DbtrAgt/FinInstnId/BICFI,DEUTDEFF,MATCHED,camt.054.001.14,dim_agent,agent_bicfi,debtor_agent
+mt910_basic,MT910,camt.054.001.08,Document/BkToCstmrDbtCdtNtfctn/Ntfctn/Ntry/NtryDtls/TxDtls/RltdPties/Dbtr/Pty/Nm,JOHN DOE,MATCHED,camt.054.001.14,dim_party,party_name,debtor
+mt910_basic,MT910,camt.054.001.08,Document/BkToCstmrDbtCdtNtfctn/Ntfctn/Ntry/NtryDtls/TxDtls/RltdPties/DbtrAcct/Id/IBAN,DE89370400440532013000,MATCHED,camt.054.001.14,fact_payment_account,account_id,debtor_account
+mt910_basic,MT910,camt.054.001.08,Document/BkToCstmrDbtCdtNtfctn/Ntfctn/Ntry/NtryRef,NOTIF0001,MATCHED,camt.054.001.14,fact_account_entry,entry_reference,
+mt910_basic,MT910,camt.054.001.08,Document/BkToCstmrDbtCdtNtfctn/Ntfctn/Ntry/Sts/Cd,BOOK,MATCHED,camt.054.001.14,fact_account_entry,entry_status,
+mt910_basic,MT910,camt.054.001.08,Document/BkToCstmrDbtCdtNtfctn/Ntfctn/Ntry/ValDt/Dt,2026-07-12,MATCHED,camt.054.001.14,fact_account_entry,entry_value_date,
+mt920_basic,MT920,camt.060.001.05,Document/AcctRptgReq/GrpHdr/CreDtTm,2026-09-03T07:23:25Z,DFR_MESSAGE_NOT_IN_SCOPE,,,,
+mt920_basic,MT920,camt.060.001.05,Document/AcctRptgReq/GrpHdr/MsgId,REQ000123,DFR_MESSAGE_NOT_IN_SCOPE,,,,
+mt920_basic,MT920,camt.060.001.05,Document/AcctRptgReq/RptgReq/Acct/Id/IBAN,DE89370400440532013000,DFR_MESSAGE_NOT_IN_SCOPE,,,,
+mt920_basic,MT920,camt.060.001.05,Document/AcctRptgReq/RptgReq/AcctOwnr/Agt/FinInstnId/BICFI,BANKBEBBXXX,DFR_MESSAGE_NOT_IN_SCOPE,,,,
+mt920_basic,MT920,camt.060.001.05,Document/AcctRptgReq/RptgReq/Id,REQ000123,DFR_MESSAGE_NOT_IN_SCOPE,,,,
+mt920_basic,MT920,camt.060.001.05,Document/AcctRptgReq/RptgReq/ReqdMsgNmId,camt.053.001.08,DFR_MESSAGE_NOT_IN_SCOPE,,,,
+mt920_basic,MT920,camt.060.001.05,Document/AcctRptgReq/RptgReq/ReqdTxTp/CdtDbtInd,DBIT,DFR_MESSAGE_NOT_IN_SCOPE,,,,
+mt920_basic,MT920,camt.060.001.05,Document/AcctRptgReq/RptgReq/ReqdTxTp/FlrLmt/Amt,1000.00,DFR_MESSAGE_NOT_IN_SCOPE,,,,
+mt920_basic,MT920,camt.060.001.05,Document/AcctRptgReq/RptgReq/ReqdTxTp/FlrLmt/Amt/@Ccy,EUR,DFR_MESSAGE_NOT_IN_SCOPE,,,,
+mt920_basic,MT920,camt.060.001.05,Document/AcctRptgReq/RptgReq/ReqdTxTp/FlrLmt/CdtDbtInd,DEBT,DFR_MESSAGE_NOT_IN_SCOPE,,,,
+mt920_basic,MT920,camt.060.001.05,Document/AcctRptgReq/RptgReq/ReqdTxTp/Sts/Cd,INFO,DFR_MESSAGE_NOT_IN_SCOPE,,,,

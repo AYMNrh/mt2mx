@@ -1,0 +1,29 @@
+{
+  "per_message": {
+    "camt.054.001.08": {
+      "MATCHED": 18
+    },
+    "camt.060.001.05": {
+      "DFR_MESSAGE_NOT_IN_SCOPE": 11
+    },
+    "pacs.008.001.08": {
+      "MATCHED": 58
+    },
+    "pacs.009.001.08": {
+      "MATCHED": 48
+    }
+  },
+  "samples": 6,
+  "samples_schema_valid": 6,
+  "status_counts": {
+    "DFR_MESSAGE_NOT_IN_SCOPE": 11,
+    "MATCHED": 124
+  },
+  "version_aliases": {
+    "camt.054.001.08": "camt.054.001.14",
+    "pacs.008.001.08": "pacs.008.001.14",
+    "pacs.009.001.08": "pacs.009.001.13"
+  },
+  "xml_paths_total": 135,
+  "xsd_validation_skipped": false
+}

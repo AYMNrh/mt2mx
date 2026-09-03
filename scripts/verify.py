@@ -98,6 +98,16 @@ def main() -> None:
     except ImportError as exc:
         check(False, f"translation verification unavailable: {exc}")
 
+    e2e = json.loads((ROOT / "outputs/e2e_lineage_audit.json").read_text(encoding="utf-8"))
+    check(e2e["samples"] == 6, "e2e audit sample count mismatch")
+    check(e2e["samples_schema_valid"] == 6, "e2e audit: not every sample output is schema-valid")
+    statuses = e2e["status_counts"]
+    check(statuses.get("MATCHED", 0) == 124, f"expected 124 XML->DFR matches, got {statuses.get('MATCHED')}")
+    check(statuses.get("PATH_NOT_MAPPED", 0) == 0, f"XML paths missing from DFR: {statuses.get('PATH_NOT_MAPPED')}")
+    check(statuses.get("DFR_MESSAGE_NOT_IN_SCOPE", 0) == 11, "camt.060 out-of-scope count drift")
+    e2e_csv = read_csv("outputs/e2e_lineage_audit.csv")
+    check(len(e2e_csv) == e2e["xml_paths_total"], "e2e audit CSV row count disagrees with JSON")
+
     try:
         from openpyxl import load_workbook
         workbook = load_workbook(ROOT / "outputs/MT_TO_MX_REVIEW.xlsx", read_only=True, data_only=False)
